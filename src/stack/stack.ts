@@ -12,4 +12,9 @@ export class Stack {
   pop() {
     return this.items.pop();
   }
+
+  peek() {
+    const length = this.items.length;
+    return this.items[length - 1];
+  }
 }

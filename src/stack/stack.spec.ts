@@ -29,4 +29,16 @@ describe('Stack', () => {
     expect(value).toBe('3');
     expect(stack.items).toEqual(['2', '1']);
   });
+
+  test('Should peek the last pile element', () => {
+    const stack = new Stack();
+
+    stack.push(['2']);
+    stack.push(['1']);
+    stack.push(['3']);
+
+    const value = stack.peek();
+
+    expect(value).toBe('3');
+  });
 });
