@@ -8,4 +8,8 @@ export class Stack {
   push(element: string[]) {
     this.items.push(...element);
   }
+
+  pop() {
+    return this.items.pop();
+  }
 }
