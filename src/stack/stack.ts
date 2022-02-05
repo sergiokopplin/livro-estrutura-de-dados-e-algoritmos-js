@@ -1,11 +1,11 @@
 export class Stack {
-  public items: string[];
+  public items: number[];
 
   constructor() {
     this.items = [];
   }
 
-  push(element: string[]) {
+  push(element: number[]) {
     this.items.push(...element);
   }
 
