@@ -41,4 +41,22 @@ describe('Stack', () => {
 
     expect(value).toBe('3');
   });
+
+  test('Should return correctly when empty pile', () => {
+    const stack = new Stack();
+
+    const value = stack.isEmpty();
+    expect(value).toBe(true);
+  });
+
+  test('Should return correctly when not empty pile', () => {
+    const stack = new Stack();
+
+    stack.push(['2']);
+    stack.push(['1']);
+    stack.push(['3']);
+
+    const value = stack.isEmpty();
+    expect(value).toBe(false);
+  });
 });

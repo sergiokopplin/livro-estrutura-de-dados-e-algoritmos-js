@@ -17,4 +17,8 @@ export class Stack {
     const length = this.items.length;
     return this.items[length - 1];
   }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
 }
