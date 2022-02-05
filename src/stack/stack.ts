@@ -5,7 +5,7 @@ export class Stack {
     this.items = [];
   }
 
-  push(element: string) {
-    this.items.push(element);
+  push(element: string[]) {
+    this.items.push(...element);
   }
 }
