@@ -59,4 +59,22 @@ describe('Stack', () => {
     const value = stack.isEmpty();
     expect(value).toBe(false);
   });
+
+  test('Should return pile size when items exists', () => {
+    const stack = new Stack();
+
+    stack.push(['2']);
+    stack.push(['1']);
+    stack.push(['3']);
+
+    const value = stack.size();
+    expect(value).toBe(3);
+  });
+
+  test('Should return pile size when pile empty', () => {
+    const stack = new Stack();
+
+    const value = stack.size();
+    expect(value).toBe(0);
+  });
 });
