@@ -1,0 +1,21 @@
+{
+  "name": "livro-estrutura-de-dados-e-algoritmos-js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Sergio Kopplin <sergiokopplin@gmail.com>",
+  "license": "ISC",
+  "prettier": "@kopplin/prettier-config",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@kopplin/commitlint-config": "^1.0.0",
+    "@kopplin/eslint-config": "^1.0.1",
+    "@kopplin/prettier-config": "^1.1.0",
+    "@kopplin/ts-config": "^1.1.0",
+    "dotenv": "^10.0.0",
+    "husky": "^7.0.2",
+    "jest": "^27.5.0",
+    "typescript": "^4.4.3"
+  }
+}
