@@ -6,6 +6,6 @@ export class Stack {
   }
 
   push(element: string) {
-    return this.items.push(element);
+    this.items.push(element);
   }
 }
