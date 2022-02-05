@@ -1,5 +1,5 @@
 export class Stack {
-  public readonly items: string[];
+  public items: string[];
 
   constructor() {
     this.items = [];
@@ -24,5 +24,9 @@ export class Stack {
 
   size() {
     return this.items.length;
+  }
+
+  clear() {
+    this.items = [];
   }
 }

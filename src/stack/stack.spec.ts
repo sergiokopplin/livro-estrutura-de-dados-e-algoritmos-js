@@ -77,4 +77,15 @@ describe('Stack', () => {
     const value = stack.size();
     expect(value).toBe(0);
   });
+
+  test('Should clear pile', () => {
+    const stack = new Stack();
+
+    stack.push(['2']);
+    stack.push(['1']);
+    stack.push(['3']);
+    stack.clear();
+
+    expect(stack.items).toEqual([]);
+  });
 });
