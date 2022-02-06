@@ -65,4 +65,24 @@ describe('Stack', () => {
     expect(value).toBe(34567);
     expect(stack.items).toEqual({ 0: 12345, 1: 23456 });
   });
+
+  test('Should return undefined when peek on empty pile', () => {
+    const stack = new Stack();
+
+    const value = stack.peek();
+
+    expect(value).toBe(undefined);
+  });
+
+  test('Should peek pile', () => {
+    const stack = new Stack();
+
+    stack.push(12345);
+    stack.push(23456);
+    stack.push(34567);
+
+    const value = stack.peek();
+
+    expect(value).toBe(34567);
+  });
 });

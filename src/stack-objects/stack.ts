@@ -25,6 +25,16 @@ export class Stack {
     return value;
   }
 
+  peek() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+
+    const value = this.items[this.count - 1];
+
+    return value;
+  }
+
   size() {
     return this.count;
   }
