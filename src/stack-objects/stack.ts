@@ -15,4 +15,8 @@ export class Stack {
   size() {
     return Object.keys(this.items).length;
   }
+
+  isEmpty() {
+    return Object.keys(this.items).length === 0;
+  }
 }

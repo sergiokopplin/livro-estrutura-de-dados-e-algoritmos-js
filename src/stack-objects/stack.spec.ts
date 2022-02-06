@@ -32,4 +32,16 @@ describe('Stack', () => {
 
     expect(stack.size()).toEqual(3);
   });
+
+  test('Should calculate if empty', () => {
+    const stack = new Stack();
+
+    expect(stack.isEmpty()).toEqual(true);
+
+    stack.push(12345);
+    stack.push(23456);
+    stack.push(34567);
+
+    expect(stack.isEmpty()).toEqual(false);
+  });
 });
