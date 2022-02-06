@@ -4,11 +4,10 @@ describe('Stack', () => {
   test('Should init empty and count zero', () => {
     const stack = new Stack();
 
-    expect(stack.count).toBe(0);
     expect(stack.items).toEqual({});
   });
 
-  test('Should push element to stack and increment count', () => {
+  test('Should push element to stack', () => {
     const stack = new Stack();
 
     stack.push(12345);
@@ -20,6 +19,17 @@ describe('Stack', () => {
       1: 23456,
       2: 34567,
     });
-    expect(stack.count).toEqual(3);
+  });
+
+  test('Should calculate size', () => {
+    const stack = new Stack();
+
+    expect(stack.size()).toEqual(0);
+
+    stack.push(12345);
+    stack.push(23456);
+    stack.push(34567);
+
+    expect(stack.size()).toEqual(3);
   });
 });

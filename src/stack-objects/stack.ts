@@ -1,6 +1,6 @@
 export class Stack {
   public items: { [key: number]: number };
-  public count: number;
+  private count: number;
 
   constructor() {
     this.count = 0;
@@ -10,5 +10,9 @@ export class Stack {
   push(element: number) {
     this.items[this.count] = element;
     this.count++;
+  }
+
+  size() {
+    return Object.keys(this.items).length;
   }
 }
