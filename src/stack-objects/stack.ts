@@ -13,10 +13,10 @@ export class Stack {
   }
 
   size() {
-    return Object.keys(this.items).length;
+    return this.count;
   }
 
   isEmpty() {
-    return Object.keys(this.items).length === 0;
+    return this.count === 0;
   }
 }
