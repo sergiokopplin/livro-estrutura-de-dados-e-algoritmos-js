@@ -1,5 +1,5 @@
 export class Stack {
-  public items: { [key: number]: string };
+  public items: { [key: number]: number };
   public count: number;
 
   constructor() {
@@ -7,7 +7,7 @@ export class Stack {
     this.items = {};
   }
 
-  push(element) {
+  push(element: number) {
     this.items[this.count] = element;
     this.count++;
   }
