@@ -85,4 +85,16 @@ describe('Stack', () => {
 
     expect(value).toBe(34567);
   });
+
+  test('Should clear pile', () => {
+    const stack = new Stack();
+
+    stack.push(12345);
+    stack.push(23456);
+    stack.push(34567);
+
+    stack.clear();
+
+    expect(stack.isEmpty()).toBe(true);
+  });
 });

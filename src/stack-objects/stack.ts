@@ -42,4 +42,9 @@ export class Stack {
   isEmpty() {
     return this.count === 0;
   }
+
+  clear() {
+    this.items = {};
+    this.count = 0;
+  }
 }
