@@ -12,6 +12,19 @@ export class Stack {
     this.count++;
   }
 
+  pop() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+
+    this.count--;
+
+    const value = this.items[this.count];
+    delete this.items[this.count];
+
+    return value;
+  }
+
   size() {
     return this.count;
   }
