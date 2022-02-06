@@ -97,4 +97,16 @@ describe('Stack', () => {
 
     expect(stack.isEmpty()).toBe(true);
   });
+
+  test('Should convert to string', () => {
+    const stack = new Stack();
+
+    expect(stack.toString()).toEqual('');
+
+    stack.push(12345);
+    stack.push(23456);
+    stack.push(34567);
+
+    expect(stack.toString()).toEqual('12345,23456,34567');
+  });
 });
