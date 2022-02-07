@@ -80,6 +80,20 @@ describe('Queue', () => {
     expect(queue.size()).toEqual(3);
   });
 
+  test('Should clear', () => {
+    const queue = new Queue();
+
+    queue.enqueue(34512);
+    queue.enqueue(34512);
+    queue.enqueue(34512);
+
+    queue.clear();
+
+    expect(queue.items).toEqual({});
+    expect(queue.size()).toEqual(0);
+    expect(queue.isEmpty()).toEqual(true);
+  });
+
   test('Should integrate', () => {
     const queue = new Queue();
 
