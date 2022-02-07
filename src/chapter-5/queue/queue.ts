@@ -23,7 +23,6 @@ export class Queue {
     delete this.items[this.lowestCount];
 
     this.lowestCount++;
-    this.count--;
 
     return value;
   }
@@ -34,5 +33,9 @@ export class Queue {
     }
 
     return this.items[this.lowestCount];
+  }
+
+  isEmpty() {
+    return this.count === 0;
   }
 }

@@ -49,4 +49,22 @@ describe('Queue', () => {
 
     expect(value).toEqual(12345);
   });
+
+  test('Should check if is empty', () => {
+    const queue = new Queue();
+
+    const value = queue.isEmpty();
+
+    expect(value).toEqual(true);
+  });
+
+  test('Should check if is empty when items', () => {
+    const queue = new Queue();
+
+    queue.enqueue(34512);
+
+    const value = queue.isEmpty();
+
+    expect(value).toEqual(false);
+  });
 });
