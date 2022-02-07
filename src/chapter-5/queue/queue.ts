@@ -15,7 +15,7 @@ export class Queue {
   }
 
   dequeue() {
-    if (this.count === 0) {
+    if (this.isEmpty()) {
       return undefined;
     }
 
@@ -28,7 +28,7 @@ export class Queue {
   }
 
   peek() {
-    if (this.count === 0) {
+    if (this.isEmpty()) {
       return undefined;
     }
 
@@ -40,6 +40,6 @@ export class Queue {
   }
 
   size() {
-    return this.count;
+    return this.count - this.lowestCount;
   }
 }
