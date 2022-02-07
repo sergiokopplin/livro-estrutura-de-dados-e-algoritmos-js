@@ -67,4 +67,16 @@ describe('Queue', () => {
 
     expect(value).toEqual(false);
   });
+
+  test('Should return size', () => {
+    const queue = new Queue();
+
+    expect(queue.size()).toEqual(0);
+
+    queue.enqueue(34512);
+    queue.enqueue(34512);
+    queue.enqueue(34512);
+
+    expect(queue.size()).toEqual(3);
+  });
 });
