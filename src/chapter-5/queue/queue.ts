@@ -35,4 +35,8 @@ export class Queue {
 
     return this.items[this.lowestCount];
   }
+
+  isEmpty() {
+    return this.count === 0;
+  }
 }
