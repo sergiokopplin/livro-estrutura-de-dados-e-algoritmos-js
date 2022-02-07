@@ -27,4 +27,12 @@ export class Queue {
 
     return value;
   }
+
+  peek() {
+    if (this.count === 0) {
+      return undefined;
+    }
+
+    return this.items[this.lowestCount];
+  }
 }

@@ -29,4 +29,24 @@ describe('Queue', () => {
     expect(queue.dequeue()).toEqual(34512);
     expect(queue.dequeue()).toEqual(undefined);
   });
+
+  test('Should peek undefined when empty', () => {
+    const queue = new Queue();
+
+    const value = queue.peek();
+
+    expect(value).toEqual(undefined);
+  });
+
+  test('Should peek', () => {
+    const queue = new Queue();
+
+    queue.enqueue(12345);
+    queue.enqueue(23451);
+    queue.enqueue(34512);
+
+    const value = queue.peek();
+
+    expect(value).toEqual(12345);
+  });
 });
