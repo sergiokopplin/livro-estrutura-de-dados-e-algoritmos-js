@@ -79,4 +79,34 @@ describe('Queue', () => {
 
     expect(queue.size()).toEqual(3);
   });
+
+  test('Should integrate', () => {
+    const queue = new Queue();
+
+    expect(queue.size()).toEqual(0);
+    expect(queue.isEmpty()).toEqual(true);
+    expect(queue.peek()).toEqual(undefined);
+
+    queue.enqueue(123);
+    queue.enqueue(321);
+    queue.enqueue(213);
+
+    expect(queue.size()).toEqual(3);
+    expect(queue.isEmpty()).toEqual(false);
+    expect(queue.peek()).toEqual(123);
+
+    queue.dequeue();
+    queue.dequeue();
+
+    expect(queue.size()).toEqual(1);
+    expect(queue.isEmpty()).toEqual(false);
+    expect(queue.peek()).toEqual(213);
+
+    queue.enqueue(123);
+    queue.enqueue(321);
+
+    expect(queue.size()).toEqual(3);
+    expect(queue.isEmpty()).toEqual(false);
+    expect(queue.peek()).toEqual(213);
+  });
 });
