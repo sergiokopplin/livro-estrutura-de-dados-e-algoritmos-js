@@ -13,4 +13,18 @@ export class Queue {
     this.items[this.count] = element;
     this.count++;
   }
+
+  dequeue() {
+    if (this.count === 0) {
+      return undefined;
+    }
+
+    const value = this.items[this.lowestCount];
+    delete this.items[this.lowestCount];
+
+    this.lowestCount++;
+    this.count--;
+
+    return value;
+  }
 }
