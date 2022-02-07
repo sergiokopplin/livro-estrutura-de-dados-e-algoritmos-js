@@ -94,12 +94,35 @@ describe('Queue', () => {
     expect(queue.isEmpty()).toEqual(true);
   });
 
+  test('Should return to string when empty', () => {
+    const queue = new Queue();
+
+    expect(queue.toString()).toEqual('');
+  });
+
+  test('Should return to string', () => {
+    const queue = new Queue();
+
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+
+    queue.dequeue();
+    queue.dequeue();
+
+    queue.enqueue(1);
+    queue.enqueue(2);
+
+    expect(queue.toString()).toEqual('3,1,2');
+  });
+
   test('Should integrate', () => {
     const queue = new Queue();
 
     expect(queue.size()).toEqual(0);
     expect(queue.isEmpty()).toEqual(true);
     expect(queue.peek()).toEqual(undefined);
+    expect(queue.toString()).toEqual('');
 
     queue.enqueue(123);
     queue.enqueue(321);
@@ -108,6 +131,7 @@ describe('Queue', () => {
     expect(queue.size()).toEqual(3);
     expect(queue.isEmpty()).toEqual(false);
     expect(queue.peek()).toEqual(123);
+    expect(queue.toString()).toEqual('123,321,213');
 
     queue.dequeue();
     queue.dequeue();
@@ -115,6 +139,7 @@ describe('Queue', () => {
     expect(queue.size()).toEqual(1);
     expect(queue.isEmpty()).toEqual(false);
     expect(queue.peek()).toEqual(213);
+    expect(queue.toString()).toEqual('213');
 
     queue.enqueue(123);
     queue.enqueue(321);
@@ -122,5 +147,6 @@ describe('Queue', () => {
     expect(queue.size()).toEqual(3);
     expect(queue.isEmpty()).toEqual(false);
     expect(queue.peek()).toEqual(213);
+    expect(queue.toString()).toEqual('213,123,321');
   });
 });
