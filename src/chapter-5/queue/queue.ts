@@ -1,5 +1,5 @@
 export class Queue {
-  public items: { [key: number]: number };
+  public items: { [key: number]: number | string };
   private count: number;
   private lowestCount: number;
 
@@ -9,7 +9,7 @@ export class Queue {
     this.items = {};
   }
 
-  enqueue(element: number) {
+  enqueue(element: number | string) {
     this.items[this.count] = element;
     this.count++;
   }
