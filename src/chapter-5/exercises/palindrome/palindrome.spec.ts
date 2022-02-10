@@ -1,7 +1,7 @@
 import { palindrome } from './palindrome';
 
 describe('palindrome', () => {
-  test.only('Should integrate', () => {
+  test('Should integrate', () => {
     const palindromeWords = ['aibofobia', 'omissíssimo', 'sopapos'];
     const notPalindromeWords = ['John', 'Jack', 'Carl'];
 
