@@ -1,7 +1,7 @@
-export class Deque {
-  public items: { [key: number]: string };
+export class Deque<T> {
   private count: number;
   private lowestCount: number;
+  private items: any;
 
   constructor() {
     this.count = 0;
@@ -9,7 +9,7 @@ export class Deque {
     this.items = {};
   }
 
-  addFront(element: string) {
+  addFront(element: T) {
     if (this.isEmpty()) {
       this.addBack(element);
     } else if (this.lowestCount > 0) {
@@ -19,14 +19,12 @@ export class Deque {
       for (let i = this.count; i > 0; i--) {
         this.items[i] = this.items[i - 1];
       }
-
       this.count++;
-      this.lowestCount = 0;
       this.items[0] = element;
     }
   }
 
-  addBack(element: string) {
+  addBack(element: T) {
     this.items[this.count] = element;
     this.count++;
   }
@@ -35,33 +33,26 @@ export class Deque {
     if (this.isEmpty()) {
       return undefined;
     }
-
-    const value = this.items[this.lowestCount];
+    const result = this.items[this.lowestCount];
     delete this.items[this.lowestCount];
-
     this.lowestCount++;
-
-    return value;
+    return result;
   }
 
   removeBack() {
     if (this.isEmpty()) {
       return undefined;
     }
-
     this.count--;
-
-    const value = this.items[this.count];
+    const result = this.items[this.count];
     delete this.items[this.count];
-
-    return value;
+    return result;
   }
 
   peekFront() {
     if (this.isEmpty()) {
       return undefined;
     }
-
     return this.items[this.lowestCount];
   }
 
@@ -69,20 +60,17 @@ export class Deque {
     if (this.isEmpty()) {
       return undefined;
     }
-
-    const value = this.items[this.count - 1];
-
-    return value;
-  }
-
-  clear() {
-    this.count = 0;
-    this.lowestCount = 0;
-    this.items = {};
+    return this.items[this.count - 1];
   }
 
   isEmpty() {
     return this.size() === 0;
+  }
+
+  clear() {
+    this.items = {};
+    this.count = 0;
+    this.lowestCount = 0;
   }
 
   size() {
@@ -93,13 +81,10 @@ export class Deque {
     if (this.isEmpty()) {
       return '';
     }
-
     let objString = `${this.items[this.lowestCount]}`;
-
     for (let i = this.lowestCount + 1; i < this.count; i++) {
       objString = `${objString},${this.items[i]}`;
     }
-
     return objString;
   }
 }
