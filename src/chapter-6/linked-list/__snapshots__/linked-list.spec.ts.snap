@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkedList Should construct correctly 1`] = `
+LinkedList {
+  "count": 0,
+  "equalsFn": [Function],
+  "head": undefined,
+}
+`;
+
+exports[`LinkedList Should getElementAt 1`] = `
+Node {
+  "element": 1,
+  "next": Node {
+    "element": 2,
+    "next": Node {
+      "element": 3,
+      "next": Node {
+        "element": 4,
+        "next": Node {
+          "element": 5,
+          "next": undefined,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList Should getElementAt 2`] = `
+Node {
+  "element": 4,
+  "next": Node {
+    "element": 5,
+    "next": undefined,
+  },
+}
+`;
+
+exports[`LinkedList Should getElementAt 3`] = `undefined`;
+
+exports[`LinkedList Should push 1`] = `
+LinkedList {
+  "count": 3,
+  "equalsFn": [Function],
+  "head": Node {
+    "element": 1,
+    "next": Node {
+      "element": 2,
+      "next": Node {
+        "element": 3,
+        "next": undefined,
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList Should removeAt 1`] = `
+LinkedList {
+  "count": 5,
+  "equalsFn": [Function],
+  "head": Node {
+    "element": 1,
+    "next": Node {
+      "element": 2,
+      "next": Node {
+        "element": 3,
+        "next": Node {
+          "element": 4,
+          "next": Node {
+            "element": 5,
+            "next": undefined,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList Should removeAt 2`] = `
+LinkedList {
+  "count": 3,
+  "equalsFn": [Function],
+  "head": Node {
+    "element": 2,
+    "next": Node {
+      "element": 3,
+      "next": Node {
+        "element": 4,
+        "next": undefined,
+      },
+    },
+  },
+}
+`;
