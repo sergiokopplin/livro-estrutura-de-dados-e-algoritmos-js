@@ -96,7 +96,7 @@ export class LinkedList {
     return false;
   }
 
-  indexOf(element: any) {
+  indexOf(element: any): number {
     let current = this.head;
 
     for (let i = 0; i < this.count && current != null; i++) {
@@ -108,5 +108,10 @@ export class LinkedList {
     }
 
     return -1;
+  }
+
+  remove(element: any): any {
+    const index = this.indexOf(element);
+    return this.removeAt(index);
   }
 }

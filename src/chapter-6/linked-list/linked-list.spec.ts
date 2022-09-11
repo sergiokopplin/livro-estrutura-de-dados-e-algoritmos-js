@@ -77,4 +77,16 @@ describe('LinkedList', () => {
 
     expect(linkedList.indexOf(4)).toBe(3);
   });
+
+  test('Should remove', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.remove(4)).toBe(4);
+  });
 });
