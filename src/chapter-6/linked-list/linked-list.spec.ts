@@ -65,4 +65,16 @@ describe('LinkedList', () => {
 
     expect(linkedList.getElementAt(10)).toMatchSnapshot();
   });
+
+  test('Should indexOf', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.indexOf(4)).toBe(3);
+  });
 });
