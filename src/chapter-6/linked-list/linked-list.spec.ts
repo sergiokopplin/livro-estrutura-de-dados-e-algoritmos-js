@@ -131,4 +131,16 @@ describe('LinkedList', () => {
 
     expect(linkedList.getHead()).toMatchSnapshot();
   });
+
+  test('Should toString', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.toString()).toBe('1,2,3,4,5');
+  });
 });

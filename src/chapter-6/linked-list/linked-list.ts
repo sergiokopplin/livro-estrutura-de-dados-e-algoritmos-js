@@ -123,7 +123,23 @@ export class LinkedList {
     return this.size() === 0;
   }
 
-  getHead() {
+  getHead(): any {
     return this.head;
+  }
+
+  toString(): string {
+    if (this.head == null) {
+      return '';
+    }
+
+    let objString = `${this.head.element}`;
+    let current = this.head.next;
+
+    for (let i = 0; i < this.size() && current != null; i++) {
+      objString = `${objString},${current.element}`;
+      current = current.next;
+    }
+
+    return objString;
   }
 }
