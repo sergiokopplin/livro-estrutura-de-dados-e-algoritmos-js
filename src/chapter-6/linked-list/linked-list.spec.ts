@@ -89,4 +89,46 @@ describe('LinkedList', () => {
 
     expect(linkedList.remove(4)).toBe(4);
   });
+
+  test('Should size', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.size()).toBe(5);
+  });
+
+  test('Should isEmpty', () => {
+    const linkedList = new LinkedList();
+
+    expect(linkedList.isEmpty()).toBe(true);
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.isEmpty()).toBe(false);
+  });
+
+  test('Should getHead', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.push(1);
+    linkedList.push(2);
+    linkedList.push(3);
+    linkedList.push(4);
+    linkedList.push(5);
+
+    expect(linkedList.getHead()).toMatchSnapshot();
+
+    linkedList.insert(1000, 0);
+
+    expect(linkedList.getHead()).toMatchSnapshot();
+  });
 });

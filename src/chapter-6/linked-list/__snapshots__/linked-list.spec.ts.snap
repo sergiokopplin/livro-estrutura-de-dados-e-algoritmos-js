@@ -39,6 +39,47 @@ Node {
 
 exports[`LinkedList Should getElementAt 3`] = `undefined`;
 
+exports[`LinkedList Should getHead 1`] = `
+Node {
+  "element": 1,
+  "next": Node {
+    "element": 2,
+    "next": Node {
+      "element": 3,
+      "next": Node {
+        "element": 4,
+        "next": Node {
+          "element": 5,
+          "next": undefined,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`LinkedList Should getHead 2`] = `
+Node {
+  "element": 1000,
+  "next": Node {
+    "element": 1,
+    "next": Node {
+      "element": 2,
+      "next": Node {
+        "element": 3,
+        "next": Node {
+          "element": 4,
+          "next": Node {
+            "element": 5,
+            "next": undefined,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
 exports[`LinkedList Should insert 1`] = `undefined`;
 
 exports[`LinkedList Should push 1`] = `

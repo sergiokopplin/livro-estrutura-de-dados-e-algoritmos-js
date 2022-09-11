@@ -114,4 +114,16 @@ export class LinkedList {
     const index = this.indexOf(element);
     return this.removeAt(index);
   }
+
+  size(): number {
+    return this.count;
+  }
+
+  isEmpty(): boolean {
+    return this.size() === 0;
+  }
+
+  getHead() {
+    return this.head;
+  }
 }
