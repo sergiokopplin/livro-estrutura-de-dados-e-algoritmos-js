@@ -39,6 +39,8 @@ Node {
 
 exports[`LinkedList Should getElementAt 3`] = `undefined`;
 
+exports[`LinkedList Should insert 1`] = `undefined`;
+
 exports[`LinkedList Should push 1`] = `
 LinkedList {
   "count": 3,

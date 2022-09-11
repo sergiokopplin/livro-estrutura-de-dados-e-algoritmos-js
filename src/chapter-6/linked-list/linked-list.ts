@@ -73,4 +73,26 @@ export class LinkedList {
 
     return undefined;
   }
+
+  insert(element: any, index: number): boolean {
+    if (index >= 0 && index <= this.count) {
+      const node = new Node(element);
+
+      if (index === 0) {
+        const current = this.head;
+        node.next = current;
+        this.head = node;
+      } else {
+        const previous = this.getElementAt(index - 1);
+        const current = previous.next;
+        node.next = current;
+        previous.next = node;
+      }
+
+      this.count++;
+      return true;
+    }
+
+    return false;
+  }
 }
