@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Set Should construct correctly 1`] = `
+Set {
+  "items": Object {},
+}
+`;
+
+exports[`Set Should work properly 1`] = `
+Set {
+  "items": Object {
+    "1": 1,
+  },
+}
+`;
+
+exports[`Set Should work properly 2`] = `
+Set {
+  "items": Object {
+    "1": 1,
+    "2": 2,
+  },
+}
+`;
+
+exports[`Set Should work properly 3`] = `
+Set {
+  "items": Object {
+    "2": 2,
+  },
+}
+`;
+
+exports[`Set Should work properly 4`] = `
+Set {
+  "items": Object {},
+}
+`;

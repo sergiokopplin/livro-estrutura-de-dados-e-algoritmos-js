@@ -1,6 +1,7 @@
 {
   "extends": "@kopplin/ts-config",
   "compilerOptions": {
+    "strict": true,
     "outDir": "dist",
     "module": "commonjs",
     "target": "es2019",
