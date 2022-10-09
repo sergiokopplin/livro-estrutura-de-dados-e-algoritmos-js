@@ -2,9 +2,9 @@ import { Set } from './set';
 
 describe('Set', () => {
   test('Should construct correctly', () => {
-    const linkedList = new Set();
+    const set = new Set();
 
-    expect(linkedList).toMatchSnapshot();
+    expect(set).toMatchSnapshot();
   });
 
   test('Should work properly', () => {

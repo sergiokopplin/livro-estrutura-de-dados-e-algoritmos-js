@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetOperations Should construct correctly 1`] = `
+SetOperations {
+  "items": Object {},
+}
+`;
