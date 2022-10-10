@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dictionary Should construct correctly 1`] = `
+Dictionary {
+  "items": Object {},
+}
+`;
+
+exports[`Dictionary Should work properly 1`] = `
+Dictionary {
+  "items": Object {
+    "1": 1,
+  },
+}
+`;
+
+exports[`Dictionary Should work properly 2`] = `
+Dictionary {
+  "items": Object {
+    "1": 1,
+    "2": 2,
+  },
+}
+`;
+
+exports[`Dictionary Should work properly 3`] = `
+Dictionary {
+  "items": Object {
+    "2": 2,
+  },
+}
+`;
+
+exports[`Dictionary Should work properly 4`] = `
+Dictionary {
+  "items": Object {},
+}
+`;
