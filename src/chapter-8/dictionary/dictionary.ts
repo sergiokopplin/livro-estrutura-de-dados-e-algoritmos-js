@@ -1,8 +1,8 @@
-function defaultToString(item: string) {
+export function defaultToString(item: string) {
   return item;
 }
 
-class ValuePair {
+export class ValuePair {
   key: string;
   value: string;
 

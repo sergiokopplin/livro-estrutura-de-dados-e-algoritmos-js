@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HashTable Should construct correctly 1`] = `
+HashTable {
+  "table": Object {},
+  "toStrFn": [Function],
+}
+`;
