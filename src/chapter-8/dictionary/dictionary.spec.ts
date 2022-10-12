@@ -14,9 +14,9 @@ describe('Dictionary', () => {
     dictionary.set('John', 'john@email.com');
     dictionary.set('Tyrion', 'tyrion@email.com');
 
-    expect(dictionary.has('Galdalf')).toBe(true);
+    expect(dictionary.has('Gandalf')).toBe(true);
     expect(dictionary.size()).toBe(3);
-    expect(dictionary.keys()).toEqual(['Galdalf', 'John', 'Tyrion']);
+    expect(dictionary.keys()).toEqual(['Gandalf', 'John', 'Tyrion']);
     expect(dictionary.values()).toEqual([
       'gandalf@email.com',
       'john@email.com',
@@ -42,7 +42,7 @@ describe('Dictionary', () => {
 
     expect(dictionary.has('John')).toBe(false);
     expect(dictionary.size()).toBe(2);
-    expect(dictionary.keys()).toEqual(['Galdalf', 'Tyrion']);
+    expect(dictionary.keys()).toEqual(['Gandalf', 'Tyrion']);
     expect(dictionary.values()).toEqual(['gandalf@email.com', 'tyrion@email.com']);
     expect(dictionary.keyValues()).toEqual([
       {
