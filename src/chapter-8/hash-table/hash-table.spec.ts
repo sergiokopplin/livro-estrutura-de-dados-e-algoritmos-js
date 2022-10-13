@@ -14,9 +14,9 @@ describe('HashTable', () => {
     hashTable.put('John', 'John@email.com');
     hashTable.put('Tyrion', 'Tyrion@email.com');
 
-    expect(hashTable.hashCode('Gandalf')).toBe(19);
-    expect(hashTable.hashCode('John')).toBe(29);
-    expect(hashTable.hashCode('Tyrion')).toBe(16);
+    expect(hashTable.hashCode('Gandalf')).toBe(798);
+    expect(hashTable.hashCode('John')).toBe(838);
+    expect(hashTable.hashCode('Tyrion')).toBe(624);
     expect(hashTable.get('Gandalf')).toBe('gandalf@email.com');
     expect(hashTable.get('Kopplin')).toBe(undefined);
 

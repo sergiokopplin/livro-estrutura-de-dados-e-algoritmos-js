@@ -23,13 +23,25 @@ export class HashTable extends Dictionary {
     return hash % 37;
   }
 
+  djb2HashCode(key: string) {
+    const tableKey: string = this.toStrFn(key);
+
+    let hash = 5381;
+
+    for (let i = 0; i < tableKey.length; i++) {
+      hash = hash * 33 + tableKey.charCodeAt(i);
+    }
+
+    return hash % 1013;
+  }
+
   hashCode(key: string): number {
-    return this.loseLoseHashCode(key);
+    return this.djb2HashCode(key);
   }
 
   put(key: string, value: any): boolean {
     if (key != null && value != null) {
-      const tableKey: number = this.loseLoseHashCode(key);
+      const tableKey: number = this.djb2HashCode(key);
       this.table[tableKey] = new ValuePair(key, value);
 
       return true;
@@ -39,12 +51,12 @@ export class HashTable extends Dictionary {
   }
 
   get(key: string): string {
-    const tableKey: number = this.loseLoseHashCode(key);
+    const tableKey: number = this.djb2HashCode(key);
     return this.table[tableKey] ? this.table[tableKey].value : undefined;
   }
 
   remove(key: string): boolean {
-    const tableKey: number = this.loseLoseHashCode(key);
+    const tableKey: number = this.djb2HashCode(key);
 
     if (this.table[tableKey]) {
       delete this.table[tableKey];
