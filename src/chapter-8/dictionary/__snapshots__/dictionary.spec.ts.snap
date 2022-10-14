@@ -2,7 +2,7 @@
 
 exports[`Dictionary Should construct correctly 1`] = `
 Dictionary {
-  "table": Object {},
+  "table": {},
   "toStrFn": [Function],
 }
 `;

@@ -2,13 +2,13 @@
 
 exports[`Set Should construct correctly 1`] = `
 Set {
-  "items": Object {},
+  "items": {},
 }
 `;
 
 exports[`Set Should work properly 1`] = `
 Set {
-  "items": Object {
+  "items": {
     "1": 1,
   },
 }
@@ -16,7 +16,7 @@ Set {
 
 exports[`Set Should work properly 2`] = `
 Set {
-  "items": Object {
+  "items": {
     "1": 1,
     "2": 2,
   },
@@ -25,7 +25,7 @@ Set {
 
 exports[`Set Should work properly 3`] = `
 Set {
-  "items": Object {
+  "items": {
     "2": 2,
   },
 }
@@ -33,6 +33,6 @@ Set {
 
 exports[`Set Should work properly 4`] = `
 Set {
-  "items": Object {},
+  "items": {},
 }
 `;

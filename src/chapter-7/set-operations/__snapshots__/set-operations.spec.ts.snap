@@ -2,6 +2,6 @@
 
 exports[`SetOperations Should construct correctly 1`] = `
 SetOperations {
-  "items": Object {},
+  "items": {},
 }
 `;

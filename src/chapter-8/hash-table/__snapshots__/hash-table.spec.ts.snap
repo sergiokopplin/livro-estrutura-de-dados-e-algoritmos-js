@@ -2,7 +2,7 @@
 
 exports[`HashTable Should construct correctly 1`] = `
 HashTable {
-  "table": Object {},
+  "table": {},
   "toStrFn": [Function],
 }
 `;
