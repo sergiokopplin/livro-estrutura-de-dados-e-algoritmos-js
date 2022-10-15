@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['@kopplin/commitlint-config'],
+  extends: ['@kopplin/commitlint'],
   rules: {
-    "subject-max-length": [0]
-  }
+    'subject-max-length': [0],
+  },
 };

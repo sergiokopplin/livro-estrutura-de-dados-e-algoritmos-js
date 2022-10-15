@@ -6,7 +6,7 @@
   },
   "author": "Sergio Kopplin <sergiokopplin@gmail.com>",
   "license": "ISC",
-  "prettier": "@kopplin/prettier-config",
+  "prettier": "@kopplin/prettier",
   "devDependencies": {
     "@babel/preset-env": "7.19.4",
     "@babel/preset-typescript": "7.18.6",
